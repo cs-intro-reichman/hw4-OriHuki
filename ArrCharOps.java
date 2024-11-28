@@ -49,16 +49,11 @@ public class ArrCharOps {
      */
     public static boolean equals(char[] arr1, char[] arr2) {
         // Replace the following statement with your code
-        boolean indicator = true; 
         for (int i = 0; i < arr1.length; i++) {
-            for (int j = 0; j < arr2.length; j++) {
-                if (charAt(arr1, i)!=charAt(arr2, j)) {
-                    indicator = false; 
-                }
-            }
-            
+            if (arr1[i] != arr2[i]) {
+                return false;}
         }
-        return indicator;
+        return true;
     }
 
     /** Returns the index within the given array of the first occurrence of the given character.
@@ -109,12 +104,17 @@ public class ArrCharOps {
     */
     public static char[] concat(char[] arr1, char[] arr2) {
         // Replace the following statement with your code
+        
         char[] arr3 = new char[arr1.length + arr2.length];
-        for (int i = 0; i < arr1.length; i++){
-            arr3[i] = arr1[i]; }
-            for (int i = 0; i < arr2.length; i++){
+    
+        for (int i = 0; i < arr1.length; i++) {
+            arr3[i] = arr1[i];
+        }
+    
+        for (int i = 0; i < arr2.length; i++) {
             arr3[arr1.length + i] = arr2[i];
         }
+
         return arr3;
     }
     /** Returns a new array that can be described as a sub-array of this array.
@@ -124,16 +124,14 @@ public class ArrCharOps {
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         // Replace the following statement with your code
-        char[] sub = new char[endIndex+1-beginIndex];
-        for (int i = 0; i < sub.length; i++) {
-            for (int j = beginIndex; j <= endIndex; j++) {
-                sub[i]=arr[j];
-                i++;
-            }
-        }
-        return sub;
+        char[] sub = new char[endIndex - beginIndex];
+
+    for (int i = 0; i < sub.length; i++) {
+        sub[i] = arr[beginIndex + i];
     }
 
+    return sub;
+}
     /** Returns a single integer that represents the given array. This integer is sometimes 
      *  referred to as the array's "hash code". Later in the course we'll explain what these 
      *  hash codes are used for. For now, simply implement the specification given below.
