@@ -178,25 +178,19 @@ public class ArrCharOps {
         if (str1 == null || str2 == null) {
             return -2; 
         }
-    
+        
         int length = Math.min(str1.length(), str2.length());
         for (int i = 0; i < length; i++) {
             char char1 = str1.charAt(i);
             char char2 = str2.charAt(i);
-    
-            if (char1 < char2) {
-                return -1;  
-            } else if (char1 > char2) {
-                return 1; 
-            }
+            
+            if (char1 < char2) return -1;
+            else if (char1 > char2) return 1;
         }
-    
-        if (str1.length() < str2.length()) {
-            return -1;  
-        } else if (str1.length() > str2.length()) {
-            return 1;   
-        }
-    
-        return 0;  
+        
+        if (str1.length() < str2.length()) return -1;
+        else if (str1.length() > str2.length()) return 1;
+        
+        return 0;// המילים שוות
     }
     }
