@@ -177,6 +177,7 @@ public class ArrCharOps {
      */
     public static int compareTo(String str1, String str2) {
         // Replace the following statement with your code
+        
         if (str1.length()==str2.length()) { 
             return 0;
         }
@@ -197,6 +198,8 @@ public class ArrCharOps {
             }
         }
     
-        return 0;
+        return -2;
+
+
     }
 }
