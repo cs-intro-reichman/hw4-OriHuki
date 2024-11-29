@@ -2,13 +2,13 @@ public class Primes {
     public static void main(String[] args) {
         // Replace this statement with your code
         int number= Integer.parseInt(args[0]);
-        int[] arr = new int[number];
+        int[] arr = new int[number+1];
         
-        for (int i = 1; i < number; i++) {
+        for (int i = 1; i < number + 1; i++) {
                 arr[i] = i;
         }
 
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i < number +1; i++) {
             if (i%2==0 && i!=2 || i%3==0 && i!=3  || i%5==0 && i!=5 || i%7==0 && i!=7) {
             arr[i] =0 ;}
         }

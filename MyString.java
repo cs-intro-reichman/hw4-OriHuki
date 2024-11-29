@@ -19,6 +19,9 @@ public class MyString {
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
         // Replace the following statement with your code
+        for (int i = 0; i < str.length(); i++) {
+            
+        }
         return null;
     }
 
